@@ -1,0 +1,78 @@
+.navContainer {
+  width: 95%;
+  margin: 20px auto;
+  border-radius: 22px;
+  background: linear-gradient(-45deg, red green blue yellow);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  padding: 1px 1px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+/* Dark gradient animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.dash-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px;
+}
+
+.dash-navbar button {
+  background: linear-gradient(135deg, #444, #222);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effects */
+.dash-navbar button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Link styling inside button */
+.dash-navbar button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dash-navbar {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .dash-navbar button {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .dash-navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dash-navbar button {
+    width: 100%;
+  }
+}

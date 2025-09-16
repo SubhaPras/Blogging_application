@@ -1,0 +1,92 @@
+.heading {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.dash-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 2rem;
+}
+
+.total-user {
+  position: relative;
+  border-radius: 22px;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  height: 220px;   /* Increased height */
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.total-user:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* background colors for each box */
+.total-user.user {
+  background: linear-gradient(135deg, #32476e, #005eff); /* Blue */
+}
+
+.total-user.blog {
+  background: linear-gradient(135deg, #ff3300, #feb47b); /* Orange */
+}
+
+.total-user.comment {
+  background: linear-gradient(135deg, #43cea2, #0080ff); /* Green */
+}
+
+.total-user img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.12;   /* faded background */
+  z-index: 0;
+}
+
+.total-user h2,
+.total-user p {
+  position: relative;
+  z-index: 1;
+}
+
+.total-user h2 {
+  font-size: 2 rem;
+  margin-bottom: 1rem;
+}
+
+.total-user p {
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.more-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;       /* full width */
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0 0 22px 22px; /* match box rounding */
+  background: rgba(0, 0, 0, 0.25); /* faded overlay */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.more-btn:hover {
+  background: rgba(0, 0, 0, 0.4);
+}

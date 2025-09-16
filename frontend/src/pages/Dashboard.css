@@ -1,0 +1,112 @@
+.analysis-card {
+  background: linear-gradient(135deg, #1e1e2f, #2a2a3d);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 95%;
+  margin: 2rem auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1s ease-in-out;
+  color: #fff;
+}
+
+/* Card heading */
+.analysis-card h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Container for sections */
+.analysis-sections {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Each analysis box */
+.analysis-box {
+  flex: 1 1 300px;
+  padding: 2rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.8s ease-in-out;
+  color: #f0f0f0;
+}
+
+.analysis-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Box headings */
+.analysis-box h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Writing Style */
+.style {
+  border-left: 6px solid #ff4d4d;
+  background: rgba(255, 77, 77, 0.1);
+}
+
+/* Strengths */
+.strengths {
+  border-left: 6px solid #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+}
+
+/* Suggestions */
+.suggestions {
+  border-left: 6px solid #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+/* Loading text */
+.loading-text {
+  text-align: center;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .analysis-sections {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .analysis-card {
+    padding: 1.5rem;
+  }
+
+  .analysis-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .analysis-box {
+    flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,261 @@
+/* Background */
+body {
+  background: linear-gradient(135deg,#68bbee, #1877F2);
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #f8f8f8;
+}
+
+/* Profile container */
+.profile-container {
+  background: rgba(255, 255, 255, 0.05);
+  max-width: 90rem;
+  margin: 2rem auto;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Image section */
+.image-section {
+  flex: 1 1 250px;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+  margin: 0 auto 1rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #4f46e5;
+  animation: pulseGlow 3s infinite;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.image-section h1 {
+  margin: 1rem 0 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Social Links */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.links a {
+  color: #fff;
+  font-size: 1.6rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.links a:hover {
+  transform: scale(1.2);
+  color: #4f46e5;
+}
+
+/* Content section */
+.content-section {
+  flex: 2 1 500px;
+  padding: 2rem;
+}
+
+.content {
+  display: grid;
+  gap: 1rem;
+  animation: slideUp 0.8s ease-in-out;
+}
+
+.content h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+.content p {
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+/* Buttons */
+.content button {
+  border: 1px solid blue;
+  padding: 0.5em 2.2em;
+  cursor: pointer;
+  border-radius: 30px;
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.content button:hover {
+  background: transparent;
+  box-shadow: 0 0 12px 3px blue;
+  transform: translateY(-2px);
+}
+
+/* Overlay */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Dialog */
+.dialog {
+  background: #1f2937;
+  padding: 25px;
+  border-radius: 12px;
+  width: 95%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+  animation: slideDown 0.5s ease-in-out;
+  color: #fff;
+}
+
+.dialog h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.dialog p {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #e5e7eb;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  color: #f8f8f8;
+  font-size: 0.95rem;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Footer buttons */
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.dialog-footer .btn {
+  background: #4f46e5;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dialog-footer .btn:hover {
+  background: #4338ca;
+}
+
+.dialog-footer .btn-outline {
+  background: #ef4444;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s;
+}
+
+.dialog-footer .btn-outline:hover {
+  background: #dc2626;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px #4f46e5; }
+  50% { box-shadow: 0 0 30px #9333ea; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-section {
+    width: 100%;
+    padding: 2rem 0;
+  }
+
+  .content-section {
+    width: 100%;
+    padding: 1.5rem;
+  }
+}

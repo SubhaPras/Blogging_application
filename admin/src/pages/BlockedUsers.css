@@ -1,0 +1,50 @@
+.blocked-users-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.loading,
+.no-users {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.users-table th,
+.users-table td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.users-table th {
+  background-color: #f4f4f4;
+  color: #444;
+}
+
+.unblock-btn {
+  background: green;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.unblock-btn:hover {
+  background: #45a049;
+}

@@ -56,12 +56,12 @@ const Comments = () => {
           comments.map((comment) => (
             <div className="comment-card" key={comment._id}>
               <img
-                src={comment.blog.thumbnail}
+                src={comment.blog?.thumbnail}
                 alt="Blog Thumbnail"
                 className="blog-image"
               />
               <div className="comment-info">
-                <h3 className="title-blog">{comment.blog.title}</h3>
+                <h3 className="title-blog">{comment.blog?.title}</h3>
                 <p className="comment-content">{comment.content}</p>
                 <small className="comment-date">
                   {new Date(comment.createdAt).toLocaleString()}
@@ -83,3 +83,4 @@ const Comments = () => {
 };
 
 export default Comments;
+

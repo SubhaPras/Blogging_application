@@ -226,7 +226,7 @@ export const analyzeUser = async (req, res) => {
     const blogs = await Blog.find({ author: userId });
 
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
     const prompt = `
       Analyze the following user profile and blogs:
@@ -251,4 +251,5 @@ export const analyzeUser = async (req, res) => {
     return res.status(500).json({ success: false, message: "Server error" });
   }
 };
+
 
